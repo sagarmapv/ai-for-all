@@ -127,11 +127,5 @@ Phase 4             AI-For-All Voice Interface
 
 ---
 
-## Port registry
-
-See [PORTS.md](PORTS.md) — all AI-For-All services claim a port there first.
-
----
-
 *Telecom was the proof. AI-For-All is the platform.*
 *Built by Aditya Madduri — shipped with Claude.*
