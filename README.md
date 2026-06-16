@@ -1,64 +1,85 @@
 # AI-For-All
 
-**Help people understand complex systems using AI.**
+**Help people learn, build, understand, and improve complex systems using AI.**
 
-AI-For-All is a personal product ecosystem built by [Aditya Madduri](https://github.com/sagarmapv) — an Enterprise AI & Distributed Systems Architect with a background in telecom, APIs, and applied AI.
+AI-For-All is a product ecosystem built by [Aditya Madduri](https://github.com/sagarmapv) — an Enterprise AI & Distributed Systems Architect with a background in telecom, APIs, and applied AI.
 
-Each product solves a real understanding problem: understand a 5G network, understand a product's requirements and tests, understand Python, understand REST APIs.
+---
+
+## Strategic pillars
+
+| Pillar | Purpose |
+|---|---|
+| **Education** — Learn | Build skills through guided practice and adaptive learning |
+| **Product Intelligence** — Build Correctly | Connect Requirements, Design, Tests, and operational evidence |
+| **Knowledge Infrastructure** — Connect Knowledge | Ingest, structure, chunk, embed, and retrieve enterprise artifacts |
+| **Telecom Intelligence** — Understand & Diagnose | Understand 5G specs, APIs, logs, and call flows |
+| **Quality Engineering** — Start with Quality | Generate high-quality R-D-T skeletons from proven engineering patterns |
+| **Natural Interaction** — Interact Naturally | Make AI systems accessible through voice across all domains |
 
 ---
 
 ## Products
 
-### AI-Advisor — *Knowledge Core*
-> Ingest Requirements, Design, and Tests. Detect what's missing. Answer questions about your product.
+### AI-Advisor — *Product Intelligence*
+> Connect Requirements, Design, Tests, Jira artifacts, automation, and operational evidence into a single Product Intelligence layer.
 
-AI-Advisor takes R-D-T artifacts (requirements docs, design specs, test cases) and does three things:
-- Detects gaps — missing Design when only Requirements exist, missing Tests when Requirements+Design are present
-- Stitches Requirements, Design, and Tests into a unified, queryable knowledge base
-- Answers product questions grounded in the actual artifacts, not hallucination
+Ingests R-D-T artifacts, detects gaps (missing Design, missing Tests), stitches them into a unified queryable knowledge base, and answers product questions grounded in actual artifacts. Runs locally (Ollama), on a local Kubernetes cluster, or against the Anthropic API — pluggable LLM backend.
 
-Runs locally (Ollama), on a local Kubernetes cluster, or against the Anthropic API — pluggable LLM backend.
+Powered internally by the **Knowledge Core** — the ingestion, chunking, embedding, and retrieval engine that acts as the platform foundation for all AI-For-All products.
 
 **Repo:** [ai-advisor](https://github.com/sagarmapv/ai-advisor) *(private — active build)*
 
 ---
 
 ### 5G Analyzer — *Telecom Intelligence*
-> Parse 5G SBI OpenAPI specs. Explore network functions, call flows, and sequence diagrams.
+> Help telecom engineers understand specifications, APIs, logs, call flows, and network behaviour faster using AI-assisted analysis.
 
-A web tool that turns 3GPP YAML specs into an interactive Explorer (NF → Services → SBI messages), Topology graph, Master Story flows, and Ladder sequence diagrams. The AI log-correlation layer (upload a debug log, identify which call flow and where it's stuck) is on the roadmap.
+**Live demo:** [sagarmapv.github.io/5g-yaml-analyzer](https://sagarmapv.github.io/5g-yaml-analyzer/)
 
-**Repo:** [5g-yaml-analyzer](https://github.com/sagarmapv/5g-yaml-analyzer) *(public)*
+Parses 3GPP YAML specs into an interactive Explorer (NF → Services → SBI messages), Topology graph, Master Story flows, and Ladder sequence diagrams. Also serves as the **5G Knowledge Proving Ground** — the validation corpus for AI-Advisor's knowledge and gap-detection capabilities.
+
+**Repos:** [5g-yaml-analyzer](https://github.com/sagarmapv/5g-yaml-analyzer) *(public demo)* · [5g-visualizer](https://github.com/sagarmapv/5g-visualizer) *(private — active build)*
 
 ---
 
-## Education Wing
+### Engineering Template Generator — *Quality Engineering*
+> Generate lightweight but high-quality Requirements, Design, and Test skeletons inspired by proven engineering practices — telecom-grade specification structures as role models for any domain.
 
-### Python Quiz App — *Learn Python*
-> Topic-by-topic Python MCQs mapped to the official Python tutorial. Track what you know, reinforce what you don't.
+Startups and teams get a lean but strong scaffold to build quality products from day one. 3GPP specs demonstrate what excellent, traceable requirements look like; the generator extracts that pattern and applies it to any product domain.
 
-14 topics from the official Python docs, per-question wrong-attempt tracking, subtopic progress stats, and cloze-style "Points to Remember" recall. Designed to build daily muscle memory, not just pass a test.
+*On the roadmap — Phase 3.*
+
+---
+
+## Education wing
+
+### Python Learning Platform — *Education*
+> Build Python skills through guided practice, adaptive learning, quizzes, and AI-assisted learning paths.
+
+14 topics mapped to the official Python tutorial, per-question wrong-attempt tracking, subtopic progress stats, and cloze-style "Points to Remember" recall. Designed for daily muscle memory — not just passing a test.
 
 **Repo:** [python-quiz-app](https://github.com/sagarmapv/python-quiz-app) *(public)*
 
 ---
 
-### use-python-build-rest — *Apply Python*
-> You learned Python. Now use it to build something real.
+### use-python-build-rest — *Education*
+> You learned Python. Now use it to build something real — and see the same pattern in 5G and AI.
 
-A hands-on REST API tutor: a live FastAPI server with one CRUD resource, an interactive HTML client that fires GET / POST / PUT / PATCH / DELETE and shows the server state changing in real time. Each part of the server is mapped back to the Python topics from the quiz app — so learners see exactly which concepts they already know doing real work.
+**Live demo:** [sagarmapv.github.io/use-python-build-rest](https://sagarmapv.github.io/use-python-build-rest/)
 
-**Repo:** [use-python-build-rest](https://github.com/sagarmapv/use-python-build-rest) *(active build)*
+A hands-on REST API tutor teaching GET / POST / PUT / PATCH / DELETE through **three parallel worlds**: a Python FastAPI server, 5G network functions (SBI interfaces), and the Claude AI API. REST is how everything talks to everything — only the payload changes.
+
+**Repo:** [use-python-build-rest](https://github.com/sagarmapv/use-python-build-rest) *(public)*
 
 ---
 
-## Innovation Wing
+## Innovation wing
 
-### multi_agent_ai — *Local Multi-Agent Architecture PoC*
+### multi_agent_ai — *Knowledge Infrastructure PoC*
 > Fully local multi-agent system using FastAPI, JSON-RPC, and MCP tool servers.
 
-A proof-of-concept for a modular agent architecture: a Research Agent (L1) interprets user prompts, routes to specialised L2 agents (Sales, Inventory), which call MCP tool servers backed by Pandas DataFrames. No cloud dependency. Foundation for AI-Advisor's future agent layer.
+A proof-of-concept for modular agent architecture: Research Agent (L1) → specialised L2 agents → MCP tool servers. No cloud dependency. Foundation for AI-Advisor's future agent layer.
 
 **Repo:** [multi_agent_ai](https://github.com/sagarmapv/multi_agent_ai) *(private)*
 
@@ -67,42 +88,50 @@ A proof-of-concept for a modular agent architecture: a Research Agent (L1) inter
 ### robot-bdd-poc — *Test Automation Bridge*
 > Robot Framework + Playwright, from telecom QA to generic SDET practices.
 
-Structured Robot Framework test cases (GWT-style), Playwright headless tests, and an `agentic_thinking/` folder with design notes on automating test generation — directly feeding into AI-Advisor's R-D-T ingestion model.
+Structured Robot Framework test cases (GWT-style), Playwright headless tests, and `agentic_thinking/` design notes — directly feeding into AI-Advisor's R-D-T ingestion model as a real test corpus.
 
 **Repo:** [robot-bdd-poc](https://github.com/sagarmapv/robot-bdd-poc) *(public)*
+
+---
+
+## Voice interface *(parked — Phase 4)*
+
+### AI-For-All Voice Interface — *Natural Interaction*
+> Make AI systems accessible through natural voice interaction across education, telecom, and enterprise knowledge domains.
+
+Activates once the product and knowledge layers have real users. The interaction layer sits on top of all other pillars.
 
 ---
 
 ## Roadmap
 
 ```
-Phase 0 (now)     Python Quiz App adaptive loop
-                  use-python-build-rest launch
+Phase 0 (shipped)   Python Learning Platform (quiz app)
+                    use-python-build-rest (live demo)
 
-Phase 1           AI-Advisor v1 — Knowledge Core
-                  Ingest 5G specs as R+D corpus
-                  Detect missing Tests, generate draft test plan
+Phase 1 (active)    AI-Advisor v1 — Knowledge Core
+                    Ingest 5G specs as R+D corpus
+                    Detect missing Tests, generate draft test plan
 
-Phase 2           5G Analyzer AI layer
-                  Upload debug log → identify call flow → locate where stuck
-                  Powered by AI-Advisor's Knowledge Core
+Phase 2             5G Analyzer AI layer
+                    Upload debug log → identify call flow → where stuck
+                    Powered by AI-Advisor's Knowledge Core
 
-Phase 3           AI-Advisor v2
-                  Full R-D-T stitching across real projects
-                  Startup skeleton templates from 3GPP spec patterns
+Phase 3             AI-Advisor v2 + Engineering Template Generator
+                    Full R-D-T stitching across real projects
+                    3GPP-inspired quality skeletons for any domain
 
-Phase 4           Voice Plugin
-                  Natural language interface over the full ecosystem
+Phase 4             AI-For-All Voice Interface
+                    Natural language across the full ecosystem
 ```
 
 ---
 
-## Common thread
+## Port registry
 
-Every product here is about the same thing: **translating complex technical systems into something humans can understand** — whether that's a 5G network, a product's requirements, Python code, or an API.
-
-Telecom was the proof. AI-For-All is the platform.
+See [PORTS.md](PORTS.md) — all AI-For-All services claim a port there first.
 
 ---
 
-*Built with intention by Aditya Madduri — guided by curiosity, shipped with Claude.*
+*Telecom was the proof. AI-For-All is the platform.*
+*Built by Aditya Madduri — shipped with Claude.*
