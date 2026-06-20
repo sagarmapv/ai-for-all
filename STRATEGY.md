@@ -8,7 +8,7 @@
 |---|---|---|
 | Python Learning ([Practice-Python-Project](../Practice-Python-Project)) | Existing asset | Working quiz app; adaptive daily-practice loop not built |
 | 5G Analyzer ([5g-visualizer](../5g-visualizer)) | Existing asset | Mature spec explorer; AI log-correlation layer not built (blocked on sample log) |
-| **AI-Advisor** (formerly ProPT) | New flagship / concept | Not started — see scope below |
+| **AI-Advisor** | New flagship / concept | Not started — see scope below |
 | Dataset Builder | Concept | Absorbed into AI-Advisor's core engine (see below) — not a separate product anymore |
 | Voice Plugin | Moonshot | Parked until AI-Advisor + 5G AI layer have real usage |
 
@@ -52,6 +52,13 @@ Phase 4 (parked)            Voice Plugin — only once Phase 1-2 have real users
 - **One coordination folder** (`AI-For-All/`) holds this strategy doc and, later, the shared Knowledge Core module spec — each product repo stays independent but references it.
 - **Per-product sessions**: implementation work happens inside each repo (5g-visualizer, Practice-Python-Project, new `ai-advisor/`) with its own CLAUDE.md once conventions emerge.
 - **This main session**: roadmap reviews, sequencing decisions, "what's next" — kept lightweight, no code.
+
+## Education wing repos
+
+| Repo | Purpose | Connection |
+|---|---|---|
+| `python-quiz-app` | Learn Python fundamentals (MCQ, topic tracking, Points to Remember) | Entry point |
+| `use-python-build-rest` | Apply Python to build a REST API — GET/POST/PUT/PATCH/DELETE with live server state | "You learned Python, now build with it" — links back to Topics 3/4/6 of quiz app |
 
 ## Immediate next actions
 
