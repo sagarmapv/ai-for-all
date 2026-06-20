@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI-Advisor — catch what humans miss, before you build</title>
+<meta name="description" content="A pre-implementation SDLC validation framework. Checks that your Requirements, Design and Tests are complete, consistent and traceable — before you write code. Rules decide what's missing; AI drafts and plans." />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0f1117; --card:#1a1d2e; --line:#2a2d3e; --ink:#e8eaf0; --dim:#9ca3af;
+    --mut:#6b7280; --pur:#a78bfa; --pur2:#7c3aed; --grn:#34d399; --red:#f87171; --blu:#60a5fa;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+       line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--pur);text-decoration:none}
+  a:hover{color:#c4b5fd}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  section{padding:54px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.5rem;margin-bottom:8px}
+  .eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pur);font-weight:700;margin-bottom:10px}
+  .lead{color:var(--dim);font-size:1.02rem}
+  .grid{display:grid;gap:16px;margin-top:22px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:680px){.g3,.g2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1rem;margin-bottom:6px}
+  .card p{font-size:.9rem;color:var(--dim)}
+  .pill{display:inline-block;font-family:Consolas,monospace;font-size:.74rem;font-weight:700;
+        color:var(--pur);background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);
+        border-radius:6px;padding:2px 8px}
+
+  /* hero */
+  header.hero{padding:88px 0 64px;text-align:center;position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 60% at 50% 0%,rgba(124,58,237,.22),transparent 70%);z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  .badge{display:inline-block;font-size:.74rem;color:var(--dim);border:1px solid var(--line);
+         border-radius:20px;padding:5px 14px;margin-bottom:22px}
+  .badge b{color:var(--pur)}
+  h1{font-size:2.7rem;line-height:1.12;font-weight:700;letter-spacing:-.02em}
+  h1 .accent{background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;
+             background-clip:text;color:transparent}
+  .tag{font-size:1.12rem;color:var(--dim);max-width:660px;margin:18px auto 0}
+  .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:10px}
+  .btn.primary{background:var(--pur2);color:#fff}
+  .btn.primary:hover{background:#6d28d9;color:#fff}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--pur)}
+
+  /* flow */
+  .flow{display:flex;align-items:stretch;gap:0;margin-top:24px;flex-wrap:wrap}
+  .flow .step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);
+              border-radius:12px;padding:16px;text-align:center}
+  .flow .arrow{display:flex;align-items:center;justify-content:center;color:var(--mut);
+               font-size:1.4rem;padding:0 8px}
+  @media(max-width:680px){.flow .arrow{transform:rotate(90deg);padding:6px 0}}
+  .flow .step .k{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pur);font-weight:700}
+  .flow .step .d{font-size:.82rem;color:var(--dim);margin-top:4px}
+
+  /* proof */
+  .proof{background:linear-gradient(180deg,rgba(52,211,153,.06),transparent);
+         border:1px solid rgba(52,211,153,.2);border-radius:16px;padding:26px}
+  .proof .quote{font-size:1.12rem;color:var(--ink);font-style:italic;line-height:1.6}
+  .proof .src{font-size:.82rem;color:var(--mut);margin-top:12px}
+  .found{display:flex;gap:12px;margin-top:16px}
+  .found .x{color:var(--grn);font-weight:700;flex-shrink:0}
+  .found p{font-size:.9rem;color:var(--dim)}
+
+  /* standards row */
+  .std{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .std span{font-size:.78rem;color:var(--dim);background:#13151f;border:1px solid var(--line);
+            border-radius:8px;padding:6px 12px}
+  .std b{color:var(--ink)}
+
+  footer{padding:40px 0 60px;text-align:center;color:var(--mut);font-size:.85rem}
+  footer a{color:var(--dim)}
+  .muted{color:var(--mut);font-size:.82rem}
+  code{font-family:Consolas,monospace;background:#13151f;border:1px solid var(--line);
+       border-radius:5px;padding:1px 6px;font-size:.85em;color:#c7cbd6}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge">Flagship of the <b>AI-For-All</b> portfolio · local-first</div>
+    <h1>Catch what humans miss —<br><span class="accent">before you build.</span></h1>
+    <p class="tag">AI-Advisor is a <b>pre-implementation SDLC validation framework</b>.
+       It reads your Requirements, Design and Tests, checks they're complete, consistent
+       and traceable against real standards — and drafts whatever's missing.</p>
+    <div class="cta">
+      <a class="btn primary" href="#how">How it works</a>
+      <a class="btn ghost" href="https://github.com/sagarmapv/ai-for-all">View the AI-For-All portfolio</a>
+    </div>
+  </div>
+</header>
+
+<!-- WHAT -->
+<section id="what">
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2>Software fails where the inputs were incomplete — not where the code was wrong.</h2>
+    <p class="lead">A requirement with no design. A design with no test. The timeout path, the
+       policy-denial case, the "what if the file is corrupt" no one wrote down. These gaps are
+       invisible while you author and expensive once you ship. AI-Advisor finds them <b>before
+       a line of code is written.</b></p>
+    <div class="grid g3">
+      <div class="card"><h3>📋 Requirements → Design</h3><p>Every requirement should be realized
+        by some design. AI-Advisor flags the ones that aren't — silent risk made visible.</p></div>
+      <div class="card"><h3>🧩 Design → Tests</h3><p>Each design element needs the <i>right kinds</i>
+        of tests. The matrix knows which — even the failure paths people skip.</p></div>
+      <div class="card"><h3>🔗 Full traceability</h3><p>A many-to-many R↔D↔T graph with stable
+        hierarchical IDs (<span class="pill">R-017.3</span>) you can read and cite at a glance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Rules decide what's missing. AI drafts <em>and</em> plans.</h2>
+    <p class="lead">A deterministic engine does the judging — so every gap is explainable, never a
+       guess. The model only steps in to write the missing piece or propose a plan.</p>
+    <div class="flow">
+      <div class="step"><div class="k">Ingest</div><div class="d">Any docs → R/D/T chunks. Messy
+        markdown, tables, code — handled.</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="k">Validate</div><div class="d">Deterministic rules + ISO
+        standards find every gap, with provenance.</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="k">Generate</div><div class="d">AI drafts the missing test or
+        design; it's persisted and the gap closes.</div></div>
+    </div>
+    <div class="std">
+      <span><b>Requirements</b> · ISO/IEC/IEEE 29148</span>
+      <span><b>Design</b> · ISO 42010 / IEEE 1016</span>
+      <span><b>Tests</b> · ISTQB levels + ISO 25010</span>
+    </div>
+    <p class="muted" style="margin-top:14px">Local-first: embeddings + vector search + a local LLM
+      run on your machine. Your documents never leave it.</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="wrap">
+    <div class="eyebrow">Proof — a real document, a domain it had never seen</div>
+    <h2 style="margin-bottom:18px">It read a banking tool's README and caught two real gaps.</h2>
+    <div class="proof">
+      <div class="quote">"Your privacy promise has no test behind it, and the money math you ship
+        isn't covered by any described test."</div>
+      <div class="src">— AI-Advisor, on the Banking Statement Auditor README (never trained on it)</div>
+      <div class="found"><span class="x">✓</span><p><b>Unverified privacy claim.</b> "Data stays on
+        the auditor's PC" was flagged as a security NFR with nothing verifying it.</p></div>
+      <div class="found"><span class="x">✓</span><p><b>Untested money logic.</b> The README said
+        "we run pytest" — but subtotal accuracy, the tax %, and export integrity had no described
+        test coverage at all.</p></div>
+    </div>
+    <p class="muted" style="margin-top:14px">Both true. Both the kind of thing a human nods past.
+      That's the product thesis: completeness insurance, not mere automation.</p>
+  </div>
+</section>
+
+<!-- BACKBONE -->
+<section id="backbone">
+  <div class="wrap">
+    <div class="eyebrow">More than one product</div>
+    <h2>A reusable backbone for the whole portfolio.</h2>
+    <p class="lead">The engine — ingest → embed → validate → generate — is exposed as a single
+       <code>KnowledgeCore</code> any AI-For-All product plugs into with just its own adapter.
+       One spine, many products.</p>
+    <div class="grid g2">
+      <div class="card"><h3>Pluggable by config</h3><p>Swap the LLM (local ↔ cloud) or the embedder
+        through config — never touching engine logic. Clear line between what's ours and what's
+        third-party.</p></div>
+      <div class="card"><h3>Fear-removal UX</h3><p>A calm, guided wizard turns a scary spec into a
+        few readable tables — and drafts every missing piece in one click.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>AI-Advisor — part of the <b>AI-For-All</b> vision: local-first tools that let humans create
+       while AI handles the plumbing.</p>
+    <p style="margin-top:8px"><a href="https://github.com/sagarmapv/ai-for-all">github.com/sagarmapv/ai-for-all</a></p>
+    <p class="muted" style="margin-top:14px">Built from scratch · runs on your machine · your data stays yours.</p>
+  </div>
+</footer>
+
+</body>
+</html>
