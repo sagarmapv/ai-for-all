@@ -8,6 +8,10 @@ AI-For-All is a product ecosystem built by [Aditya Madduri](https://github.com/s
 
 ---
 
+![AI-For-All Portfolio](portfolio-evolution.svg)
+
+---
+
 ## The backbone
 
 Every AI-For-All product is powered by a single reusable engine — the **Knowledge Core**.

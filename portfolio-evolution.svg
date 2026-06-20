@@ -1,0 +1,153 @@
+<svg width="100%" viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>AI-For-All Portfolio</title>
+
+<style>
+  text { font-family: system-ui, -apple-system, sans-serif; fill: #1a1a1a; }
+  .th { font-size: 13px; font-weight: 600; }
+  .ts { font-size: 11px; font-weight: 400; fill: #444; }
+  .badge { font-size: 10px; font-weight: 500; }
+</style>
+
+<!-- Header -->
+<rect x="0" y="0" width="680" height="52" fill="#26215C"/>
+<text class="th" x="340" y="18" text-anchor="middle" dominant-baseline="central" style="font-size:17px;fill:#EEEDFE">AI-For-All Portfolio</text>
+<text class="ts" x="340" y="38" text-anchor="middle" dominant-baseline="central" style="fill:#AFA9EC">One Platform, Many Outcomes — Help people learn, build, understand, and improve complex systems using AI.</text>
+
+<!-- Column headers -->
+<rect x="0" y="52" width="680" height="28" fill="#3C3489"/>
+<text class="th" x="220" y="66" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#EEEDFE">Product / Position</text>
+<text class="th" x="510" y="66" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#EEEDFE">Core business case</text>
+<line x1="390" y1="52" x2="390" y2="80" stroke="#EEEDFE" stroke-width="0.5" opacity="0.3"/>
+
+<!-- ROW 1 — Python Learning Platform -->
+<rect x="0" y="80" width="680" height="52" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="88" width="32" height="32" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="0.5"/>
+<text x="24" y="104" text-anchor="middle" dominant-baseline="central" style="font-size:15px">🎓</text>
+<text class="th" x="220" y="96" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#3B6D11">Python Learning Platform</text>
+<rect x="160" y="106" width="120" height="16" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="0.5"/>
+<text class="badge" x="220" y="114" text-anchor="middle" dominant-baseline="central" style="fill:#3B6D11">Education</text>
+<line x1="390" y1="80" x2="390" y2="132" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="98" text-anchor="middle" dominant-baseline="central">Guided practice, adaptive learning,</text>
+<text class="ts" x="530" y="114" text-anchor="middle" dominant-baseline="central">quizzes, coding exercises, AI-assisted paths</text>
+
+<!-- ROW 2 — use-python-build-rest -->
+<rect x="0" y="132" width="680" height="52" fill="#f9fffe" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="140" width="32" height="32" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="0.5"/>
+<text x="24" y="156" text-anchor="middle" dominant-baseline="central" style="font-size:14px">🔗</text>
+<text class="th" x="220" y="150" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#3B6D11">use-python-build-rest</text>
+<rect x="160" y="160" width="120" height="16" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="0.5"/>
+<text class="badge" x="220" y="168" text-anchor="middle" dominant-baseline="central" style="fill:#3B6D11">Education</text>
+<line x1="390" y1="132" x2="390" y2="184" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="150" text-anchor="middle" dominant-baseline="central">REST through Python, 5G &amp; Claude AI.</text>
+<text class="ts" x="530" y="166" text-anchor="middle" dominant-baseline="central">Same verb pattern, three worlds. Live ✅</text>
+
+<!-- ROW 3 — AI-Advisor -->
+<rect x="0" y="184" width="680" height="52" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="192" width="32" height="32" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="24" y="208" text-anchor="middle" dominant-baseline="central" style="font-size:14px">🧠</text>
+<text class="th" x="220" y="202" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#534AB7">AI-Advisor</text>
+<rect x="152" y="212" width="136" height="16" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="badge" x="220" y="220" text-anchor="middle" dominant-baseline="central" style="fill:#534AB7">Product Intelligence</text>
+<line x1="390" y1="184" x2="390" y2="236" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="202" text-anchor="middle" dominant-baseline="central">Validate R-D-T before build — catch gaps</text>
+<text class="ts" x="530" y="218" text-anchor="middle" dominant-baseline="central">humans miss. Core-complete ✅</text>
+
+<!-- ROW 4 — Knowledge Core -->
+<rect x="0" y="236" width="680" height="52" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="244" width="32" height="32" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="24" y="260" text-anchor="middle" dominant-baseline="central" style="font-size:14px">🗄</text>
+<text class="th" x="220" y="252" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#185FA5">Knowledge Core  ✅ built</text>
+<rect x="152" y="264" width="136" height="16" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="badge" x="220" y="272" text-anchor="middle" dominant-baseline="central" style="fill:#185FA5">Platform Capability</text>
+<line x1="390" y1="236" x2="390" y2="288" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="252" text-anchor="middle" dominant-baseline="central">Backbone all products plug into via adapter.</text>
+<text class="ts" x="530" y="268" text-anchor="middle" dominant-baseline="central">Ingest → validate → generate. Verified live.</text>
+
+<!-- ROW 5 — 5G Analyzer -->
+<rect x="0" y="288" width="680" height="52" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="296" width="32" height="32" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text x="24" y="312" text-anchor="middle" dominant-baseline="central" style="font-size:14px">📡</text>
+<text class="th" x="220" y="306" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#854F0B">5G Analyzer</text>
+<rect x="152" y="316" width="136" height="16" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text class="badge" x="220" y="324" text-anchor="middle" dominant-baseline="central" style="fill:#854F0B">Telecom Intelligence</text>
+<line x1="390" y1="288" x2="390" y2="340" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="306" text-anchor="middle" dominant-baseline="central">5G specs, APIs, call flows. Live demo ✅</text>
+<text class="ts" x="530" y="322" text-anchor="middle" dominant-baseline="central">AI log layer next — unblocked by Knowledge Core.</text>
+
+<!-- ROW 6 — 5G Knowledge Proving Ground -->
+<rect x="0" y="340" width="680" height="52" fill="#fffdf7" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="348" width="32" height="32" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text x="24" y="364" text-anchor="middle" dominant-baseline="central" style="font-size:14px">🕸</text>
+<text class="th" x="220" y="356" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#854F0B">5G Knowledge Proving Ground</text>
+<rect x="152" y="368" width="136" height="16" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text class="badge" x="220" y="376" text-anchor="middle" dominant-baseline="central" style="fill:#854F0B">Telecom Intelligence</text>
+<line x1="390" y1="340" x2="390" y2="392" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="358" text-anchor="middle" dominant-baseline="central">Visualise 5G architecture + call flows.</text>
+<text class="ts" x="530" y="374" text-anchor="middle" dominant-baseline="central">Validation corpus for AI-Advisor.</text>
+
+<!-- ROW 7 — Engineering Template Generator -->
+<rect x="0" y="392" width="680" height="52" fill="#f7fffd" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="400" width="32" height="32" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="24" y="416" text-anchor="middle" dominant-baseline="central" style="font-size:14px">📋</text>
+<text class="th" x="220" y="408" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#0F6E56">Engineering Template Generator</text>
+<rect x="152" y="420" width="136" height="16" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+<text class="badge" x="220" y="428" text-anchor="middle" dominant-baseline="central" style="fill:#0F6E56">Quality Engineering</text>
+<line x1="390" y1="392" x2="390" y2="444" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="408" text-anchor="middle" dominant-baseline="central">Telecom-grade R-D-T skeletons for any domain.</text>
+<text class="ts" x="530" y="424" text-anchor="middle" dominant-baseline="central">Unblocked — generation engine ready.</text>
+
+<!-- ROW 8 — Voice Interface -->
+<rect x="0" y="444" width="680" height="52" fill="#ffffff" stroke="#e0e0e0" stroke-width="0.5"/>
+<rect x="8" y="452" width="32" height="32" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text x="24" y="468" text-anchor="middle" dominant-baseline="central" style="font-size:14px">🎙</text>
+<text class="th" x="220" y="462" text-anchor="middle" dominant-baseline="central" style="font-size:13px;fill:#993C1D">AI-For-All Voice Interface</text>
+<rect x="152" y="472" width="136" height="16" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text class="badge" x="220" y="480" text-anchor="middle" dominant-baseline="central" style="fill:#993C1D">Interaction Layer</text>
+<line x1="390" y1="444" x2="390" y2="496" stroke="#e0e0e0" stroke-width="0.5"/>
+<text class="ts" x="530" y="462" text-anchor="middle" dominant-baseline="central">Natural voice across all domains.</text>
+<text class="ts" x="530" y="478" text-anchor="middle" dominant-baseline="central">Parked — Phase 4.</text>
+
+<!-- Pillars header -->
+<rect x="0" y="504" width="680" height="24" fill="#1D2B4F"/>
+<text class="th" x="340" y="516" text-anchor="middle" dominant-baseline="central" style="font-size:11px;fill:#EEEDFE">AI-For-All Strategic Pillars</text>
+
+<!-- Pillar boxes -->
+<rect x="4"   y="534" width="106" height="76" rx="8" fill="#EAF3DE" stroke="#639922" stroke-width="0.5"/>
+<text x="57"  y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">🎓</text>
+<text class="th" x="57"  y="574" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#3B6D11">Education</text>
+<text class="ts" x="57"  y="588" text-anchor="middle" dominant-baseline="central" style="fill:#3B6D11">Learn</text>
+
+<rect x="116" y="534" width="106" height="76" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="169" y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">🧠</text>
+<text class="th" x="169" y="572" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#534AB7">Product</text>
+<text class="th" x="169" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#534AB7">Intelligence</text>
+<text class="ts" x="169" y="598" text-anchor="middle" dominant-baseline="central" style="fill:#534AB7">Build Correctly</text>
+
+<rect x="228" y="534" width="106" height="76" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="281" y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">🗄</text>
+<text class="th" x="281" y="572" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#185FA5">Knowledge</text>
+<text class="th" x="281" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#185FA5">Infrastructure</text>
+<text class="ts" x="281" y="598" text-anchor="middle" dominant-baseline="central" style="fill:#185FA5">Connect Knowledge</text>
+
+<rect x="340" y="534" width="106" height="76" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text x="393" y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">📡</text>
+<text class="th" x="393" y="572" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#854F0B">Telecom</text>
+<text class="th" x="393" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#854F0B">Intelligence</text>
+<text class="ts" x="393" y="598" text-anchor="middle" dominant-baseline="central" style="fill:#854F0B">Understand &amp; Diagnose</text>
+
+<rect x="452" y="534" width="106" height="76" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="505" y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">📋</text>
+<text class="th" x="505" y="572" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0F6E56">Quality</text>
+<text class="th" x="505" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#0F6E56">Engineering</text>
+<text class="ts" x="505" y="598" text-anchor="middle" dominant-baseline="central" style="fill:#0F6E56">Start with Quality</text>
+
+<rect x="564" y="534" width="112" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text x="620" y="554" text-anchor="middle" dominant-baseline="central" style="font-size:17px">🎙</text>
+<text class="th" x="620" y="572" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#993C1D">Natural</text>
+<text class="th" x="620" y="584" text-anchor="middle" dominant-baseline="central" style="font-size:10px;fill:#993C1D">Interaction</text>
+<text class="ts" x="620" y="598" text-anchor="middle" dominant-baseline="central" style="fill:#993C1D">Interact Naturally</text>
+
+<!-- Mission bar -->
+<rect x="0" y="616" width="680" height="32" fill="#1D2B4F"/>
+<text class="ts" x="340" y="632" text-anchor="middle" dominant-baseline="central" style="fill:#EEEDFE;font-size:11px">🎯  Mission: Help people learn, build, understand, and improve complex systems using AI.</text>
+</svg>
